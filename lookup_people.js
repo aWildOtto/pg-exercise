@@ -21,7 +21,7 @@ client.connect((err) => {
             return console.error("error running query", err);
         }
         for (let i of result.rows) {
-            console.log(' -', i.id, ":", i.first_name, i.last_name, "born " + moment(i.birthdate * 1000).format('YYYY MM DD'));
+            console.log(' -', i.id, ":", i.first_name, i.last_name, `born  '${i.birthdate.getFullYear()}-${i.birthdate.getMonth()}-${i.birthdate.getDay()}'`);
         }
         client.end();
     });
