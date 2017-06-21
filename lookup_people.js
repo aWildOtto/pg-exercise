@@ -16,4 +16,5 @@ function printPerson(error, result) {
 
 query.lookupPerson(name);
 
+
 knexquery.lookupPerson(name);
