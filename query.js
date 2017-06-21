@@ -6,6 +6,7 @@ module.exports = {
                 if (err) {
                     return console.error("error running query", err);
                 }
+                console.log('pg query result:');
                 for (let i of result.rows) {
                     console.log(' -', i.id, ":", i.first_name, i.last_name,
                         `born  '${i.birthdate.getFullYear()}-${i.birthdate.getMonth()+1}-${i.birthdate.getDate()}'`);
